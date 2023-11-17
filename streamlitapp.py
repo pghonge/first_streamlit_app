@@ -40,4 +40,4 @@ fruit_added = streamlit.text_input('What fruit would you like information about?
 streamlit.write('Thank you for adding ', fruit_added)
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+"jackfruit")
 
-mycur.execute(insert into PC_RIVERY_DB.PUBLIC.fruit_load_list values ('from streamlittest'));
+mycur.execute("insert into PC_RIVERY_DB.PUBLIC.fruit_load_list values ('from streamlittest')");
