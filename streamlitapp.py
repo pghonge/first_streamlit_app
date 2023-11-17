@@ -32,11 +32,11 @@ try:
   else:
     back_from_function = get_fruityvice_data(fruit_choice)
     streamlit.dataframe(back_from_function)
-streamlit.header("The fruit load list contains")
-if streamlit.button('Get fruit load list'):
-  my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
-  my_data_rows = get_fruit_load_list()
-  streamlit.dataframe(my_data_rows)
+  streamlit.header("The fruit load list contains")
+  if streamlit.button('Get fruit load list'):
+    my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+    my_data_rows = get_fruit_load_list()
+    streamlit.dataframe(my_data_rows)
 
 except URLError as e:
   streamlit.error()
